@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddContact"
+    android:layout_marginTop="50dp"
+    android:id="@+id/main"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/headingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Add Contact"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#00BCD4"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="100dp"
+        android:padding="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="20dp"
+        android:id="@+id/cardView">
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add"
+                android:layout_width="56dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#A1ACF6"
+                android:layout_margin="10dp"
+                android:src="@drawable/baseline_add_24"
+                android:contentDescription="Add Button"
+                android:layout_alignRight="@+id/profile_image"
+                android:elevation="6dp" />
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/profile_img"
+                android:scaleType="centerCrop"
+                android:elevation="4dp" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="17"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:hint="Enter contact name"
+        android:layout_below="@id/cardView"/>
+    <EditText
+        android:id="@+id/numberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="17"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Enter contact number"
+        android:inputType="number"
+        android:layout_below="@+id/nametxt"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ad_update_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textStyle="bold"
+        android:layout_below="@id/numberTxt"
+        android:layout_alignRight="@id/numberTxt"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFC107"
+        />
+</RelativeLayout>
